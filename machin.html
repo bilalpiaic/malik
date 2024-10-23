@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machinery Page</title>
+    <meta charset="utf-8">
+    <title> Malik Enterprises</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="/" name="keywords">
+    <meta content="/" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Section */
+        .header {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Machinery Item Container */
+        .machinery-container {
+            padding: 20px;
+        }
+
+        .machinery-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .machinery-item img {
+            flex: 1;
+            width: 100%;
+            max-width: 500px; /* Set a max width for the images */
+            height: auto;
+            max-height: 300px; /* Set a max height for the images */
+            border-radius: 8px 0 0 8px;
+            object-fit: cover; /* Ensure the image is cropped proportionally */
+        }
+
+        .machinery-details {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .machinery-details h2 {
+            color: #333;
+        }
+
+        .machinery-details p {
+            color: #666;
+        }
+
+        .machinery-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #666;
+        }
+
+        .machinery-details ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Footer Section */
+        .footer {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .machinery-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .machinery-item img {
+                border-radius: 8px 8px 0 0;
+                max-width: 100%; /* Allow full width on smaller devices */
+                max-height: 200px;
+            }
+
+            .machinery-details {
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .machinery-details h2 {
+                font-size: 20px;
+            }
+
+            .machinery-details p,
+            .machinery-details ul {
+                font-size: 14px;
+            }
+
+            .machinery-item img {
+                max-width: 100%;
+                max-height: 180px; /* Adjusted height for smaller devices */
+            }
+            .breadcrumb-wrap {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+}
+
+.breadcrumb-wrap .breadcrumb {
+    margin: 15px 0 0 0;
+    padding: 0;
+    background: none;
+}
+
+
+
+        }
+    </style>
+</head>
+<body>
+
+<!-- Merged Header and Navbar Start -->
+<div class="top-navbar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 col-sm-6 text-center text-md-left">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/malik.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a href="#" class="navbar-brand d-md-none"></a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="./machin.html" class="nav-item nav-link">Machinery</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products</a>
+                                <div class="dropdown-menu">
+                                    <a href="product-list.html" class="dropdown-item">Men Fashion Wear</a>
+                                    <a href="product-list.html" class="dropdown-item">Men Work Wear</a>
+                                    <a href="product-list.html" class="dropdown-item">Kids Wear</a>
+                                </div>
+                            </div>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Merged Header and Navbar End -->
+
+
+
+     
+    
+    
+
+
+    <div class="header">
+        <h1 style="color: #ffffff;" >Our Machinery</h1>
+        <p>Explore our range of machinery and their work descriptions</p>
+    </div>
+
+    <div class="machinery-container">
+        <!-- Machinery Item 1 -->
+        <div class="machinery-item">
+            <img src="img/machine2.jpeg" alt="Machinery 1">
+            <div class="machinery-details">
+                <h2>Machinery 1</h2>
+                <p>This machinery is designed for heavy-duty operations. It specializes in lifting, transporting, and positioning heavy loads efficiently.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>High load capacity</li>
+                    <li>Advanced hydraulic system</li>
+                    <li>Robust and durable design</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Machinery Item 2 -->
+        <div class="machinery-item">
+            <img src="img/machine1.jpeg" alt="Machinery 2">
+            <div class="machinery-details">
+                <h2>Machinery 2</h2>
+                <p>Machinery 2 is equipped with cutting-edge technology to deliver precision in drilling and boring operations, making it an ideal choice for construction and manufacturing industries.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Precision control system</li>
+                    <li>High-efficiency motor</li>
+                    <li>Compact and mobile design</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Machinery Item 3 -->
+        <div class="machinery-item">
+            <img src="img/machine3.jpeg "alt="Machinery 3">
+            <div class="machinery-details">
+                <h2>Machinery 3</h2>
+                <p>Machinery 3 is known for its efficiency in earth-moving tasks. It is equipped with advanced sensors and GPS systems for accurate and autonomous operation.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Advanced GPS integration</li>
+                    <li>Autonomous operation capabilities</li>
+                    <li>Powerful engine performance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="machinery-item">
+        <img src="img/machine2.jpeg" alt="Machinery 1">
+        <div class="machinery-details">
+            <h2>Machinery 1</h2>
+            <p>This machinery is designed for heavy-duty operations. It specializes in lifting, transporting, and positioning heavy loads efficiently.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>High load capacity</li>
+                <li>Advanced hydraulic system</li>
+                <li>Robust and durable design</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="machinery-item">
+        <img src="img/machine2.jpeg" alt="Machinery 1">
+        <div class="machinery-details">
+            <h2>Machinery 1</h2>
+            <p>This machinery is designed for heavy-duty operations. It specializes in lifting, transporting, and positioning heavy loads efficiently.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>High load capacity</li>
+                <li>Advanced hydraulic system</li>
+                <li>Robust and durable design</li>
+            </ul>
+        </div>
+    </div>
+
+
+      <!-- Footer Start -->
+<footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="img/malik.png" alt="Company Logo" class="footer-logo-img" />
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fas fa-map-marker-alt"></i> 
+            <a href="">123 Street Name, City, Country</a>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt"></i>
+           <a href="">+123 456 7890</a> 
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i> 
+           <a href="">info@company.com</a> 
+          </li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul class="social-links">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Malik Enterprises. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+</body>
+
+
+
+
+
+</html>
