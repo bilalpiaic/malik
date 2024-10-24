@@ -411,16 +411,16 @@ button.btn {
     
 
 
-
-
-/* Main slider container styling */
 /* Main slider container styling */
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    height: 750px;
+    
+    
+    
 }
 
 /* Slider wrapper that holds the slides */
@@ -437,12 +437,16 @@ button.btn {
 }
 
 /* Image styling */
+/* Image styling */
 .slider-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+   height: 830px;
+   width: 100%;
+
+    object-fit: fill; /* Ensure the image covers the entire container, even if some parts are cropped */
+    
+   
 }
+
 
 /* Overlay styling */
 .overlay {
@@ -451,7 +455,7 @@ button.btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    background: rgba(0, 0, 0, 0.4); /* Dark transparent overlay */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -466,8 +470,6 @@ button.btn {
 
 /* Button styling inside the overlay */
 .overlay-button {
-    position: relative;
-    top: 70px;
     padding: 15px 30px;
     font-size: 18px;
     color: #fff;
@@ -476,7 +478,6 @@ button.btn {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    z-index: 999;
 }
 
 /* Smooth hover effect for the button */
@@ -493,74 +494,72 @@ button.btn {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 15px; /* Increased padding for better control visibility */
     cursor: pointer;
     z-index: 10;
 }
 
 .slider-control.prev {
-    left: 10px;
+    left: 15px;
 }
 
 .slider-control.next {
-    right: 10px;
+    right: 15px;
 }
 
 /* Responsive styling */
 @media (max-width: 1498.98px) {
     .slider-image {
-        height: auto;
-        max-height: 650px;
-        width: 100%;
+        max-height: 750px;
     }
 }
 
 @media (max-width: 1116.98px) {
     .slider-image {
-        height: auto;
-        max-height: 600px;
-        width: 100%;
+        max-height: 650px;
     }
 }
 
 @media (max-width: 980.98px) {
     .slider-image {
-        height: auto;
-        max-height: 550px;
-        width: 100%;
+        max-height: 600px;
     }
 }
 
 @media (max-width: 768px) {
     .slider-image {
-        height: auto;
-        max-height: 450px;
-        width: 100%;
+        max-height: 500px;
     }
 
     .overlay-button {
-        padding: 10px 20px;
+        padding: 12px 24px;
         font-size: 16px;
     }
 
     .slider-control {
-        padding: 8px;
+        padding: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .slider-image {
-        height: auto;
-        max-height: 450px;
+        height: 100%;
         width: 100%;
+        
     }
 
     .overlay-button {
-        display: none;
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     .slider-control {
-        padding: 6px;
+        padding: 8px;
+    }
+    .slider-container{
+        max-height: 250px;
+        width: 100%;
+
     }
 }
 
@@ -584,8 +583,6 @@ button.btn {
         display: block;
     }
 }
-
-
 
 
 
