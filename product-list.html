@@ -21,6 +21,36 @@
 
         <!--  Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>.responsive-heading {
+            font-size: 2.5rem; /* Base size for larger screens (desktop) */
+            font-weight: bold;
+            text-align: center; /* Centered alignment for aesthetics */
+            color: #333; /* Dark text color */
+            margin: 20px 0;
+        }
+        
+        /* Tablet devices */
+        @media (max-width: 1024px) {
+            .responsive-heading {
+                font-size: 2rem; /* Slightly smaller for tablets */
+            }
+        }
+        
+        /* Mobile devices */
+        @media (max-width: 768px) {
+            .responsive-heading {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+        }
+        
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            .responsive-heading {
+                font-size: 1.3rem; /* Further reduce font size for small mobile devices */
+            }
+        }
+        </style>
     </head>
 
     <body>
@@ -58,11 +88,11 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="./machin.html" class="nav-item nav-link">Machinery</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products</a>
+                                <a href="/product-list.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Products</a>
                                 <div class="dropdown-menu">
-                                    <a href="product-list.html" class="dropdown-item">Men Fashion Wear</a>
-                                    <a href="product-list.html" class="dropdown-item">Men Work Wear</a>
-                                    <a href="product-list.html" class="dropdown-item">Kids Wear</a>
+                                    <a href="menfashion.html" class="dropdown-item">Men Fashion Wear</a>
+                                    <a href="workwearlist.html" class="dropdown-item">Men Work Wear</a>
+                                    <a href="kidslist.html" class="dropdown-item">Kids Wear</a>
                                 </div>
                             </div>
                             <a href="about.html" class="nav-item nav-link">About</a>
@@ -75,19 +105,30 @@
     </div>
 </div>
 <!-- Merged Header and Navbar End -->
-        
-        
+
+    
         <!-- Breadcrumb Start -->
         <div class="breadcrumb-wrap">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    <li class="breadcrumb-item active">product list</li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="product-list.html">Products</a></li>
+                   
+                    <li class="breadcrumb-item"><a href="./workwearlist.html">Work Wear</a></li>
+                    <li class="breadcrumb-item"><a href="jacketslist.html">Jackets</a></li>
+                    <li class="breadcrumb-item"><a href="kidslist.html">Kids Wear</a></li>
+                    <li class="breadcrumb-item"><a href="menfashion.html">Men Fashion</a></li>
+                    
                 </ul>
             </div>
         </div>
         <!-- Breadcrumb End -->
+        
+        
+        
+
+        <!-- <h1 class="responsive-heading">Work Wear Collection</h1> -->
+     
         
         
         <!-- Product List Start -->
@@ -353,14 +394,10 @@
                     <div class="col-md-3">
                         <div class="sidebar-widget category">
                             <h2 class="title">Category</h2>
-                            <ul>
-                                <li><a href="#">Lorem Ipsum</a><span>(83)</span></li>
-                                <li><a href="#">Cras sagittis</a><span>(198)</span></li>
-                                <li><a href="#">Vivamus</a><span>(95)</span></li>
-                                <li><a href="#">Fusce vitae</a><span>(48)</span></li>
-                                <li><a href="#">Vestibulum</a><span>(210)</span></li>
-                                
-                            </ul>
+                            <li><a href="workwearlist.html">Men WorkWear</a><span>(83)</span></li>
+                            <li><a href="menfashion.html">Men Fashion</a><span>(198)</span></li>
+                            <li><a href="kidslist.html">Kids Wear</a><span>(95)</span></li>
+                            <li><a href="jacketslist.html">Jackets</a><span>(48)</span></li>
                         </div>
                         
                         <div class="sidebar-widget image">

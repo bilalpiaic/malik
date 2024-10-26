@@ -269,4 +269,59 @@ setInterval(() => showSlide(currentSlide + 1), 5000);
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const productsPerPage = 9; // Set the number of products per page
+    const products = document.querySelectorAll('.product-item');
+    const totalPages = Math.ceil(products.length / productsPerPage);
+
+    // Function to display a specific page
+    function showPage(pageNumber) {
+        products.forEach((product, index) => {
+            product.style.display = 'none';
+        });
+
+        // Calculate start and end indices for the current page
+        const startIndex = (pageNumber - 1) * productsPerPage;
+        const endIndex = startIndex + productsPerPage;
+
+        for (let i = startIndex; i < endIndex && i < products.length; i++) {
+            products[i].style.display = 'block';
+        }
+
+        // Update active page button and enable/disable previous/next buttons
+        document.querySelectorAll('.pagination .page-item').forEach((item) => {
+            item.classList.remove('active');
+        });
+        document.querySelector(`.pagination .page-item[data-page="${pageNumber}"]`).classList.add('active');
+        document.querySelector('.pagination .previous').classList.toggle('disabled', pageNumber === 1);
+        document.querySelector('.pagination .next').classList.toggle('disabled', pageNumber === totalPages);
+    }
+
+    // Attach event listeners to pagination items
+    document.querySelectorAll('.pagination .page-item').forEach((item) => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            let currentPage = parseInt(document.querySelector('.pagination .page-item.active').dataset.page);
+            if (this.dataset.page === 'prev' && currentPage > 1) {
+                showPage(currentPage - 1);
+            } else if (this.dataset.page === 'next' && currentPage < totalPages) {
+                showPage(currentPage + 1);
+            } else if (!isNaN(this.dataset.page)) {
+                showPage(parseInt(this.dataset.page));
+            }
+        });
+    });
+
+    // Show the first page initially
+    showPage(1);
+});
+
+
+
+
+
+
+
+
+
 
