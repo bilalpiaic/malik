@@ -325,3 +325,99 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+// Function to create a slider with separate state
+function createSlider(sliderId, autoSlideInterval = 2000) {
+    let currentIndex = 0;
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID;
+
+    const slider = document.getElementById(sliderId);
+    const totalProducts = slider.children.length;
+
+    // Clone slides to create infinite loop effect
+    for (let i = 0; i < totalProducts; i++) {
+        const clone = slider.children[i].cloneNode(true);
+        slider.appendChild(clone);
+    }
+
+    // Event listeners
+    slider.addEventListener('touchstart', startDrag);
+    slider.addEventListener('touchmove', drag);
+    slider.addEventListener('touchend', endDrag);
+    slider.addEventListener('mouseleave', endDrag);
+
+    function startDrag(event) {
+        isDragging = true;
+        startPos = getPositionX(event);
+        animationID = requestAnimationFrame(animation);
+        slider.style.transition = 'none'; // Remove transition during drag
+    }
+
+    function drag(event) {
+        if (!isDragging) return;
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPos;
+    }
+
+    function endDrag() {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+
+        const movedBy = currentTranslate - prevTranslate;
+        const productWidth = slider.children[0].clientWidth + 30; // Including margin
+
+        if (movedBy < -100) {
+            slide(1);
+        } else if (movedBy > 100) {
+            slide(-1);
+        } else {
+            slider.style.transition = 'transform 0.3s ease-out';
+            slider.style.transform = `translateX(${prevTranslate}px)`;
+        }
+    }
+
+    function getPositionX(event) {
+        return event.touches[0].clientX;
+    }
+
+    function animation() {
+        slider.style.transform = `translateX(${currentTranslate}px)`;
+        if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function slide(direction) {
+        const productWidth = slider.children[0].clientWidth + 30; // Including margin
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = totalProducts - 1;
+            prevTranslate = -currentIndex * productWidth;
+        } else if (currentIndex >= totalProducts) {
+            currentIndex = 0;
+            prevTranslate = 0;
+        } else {
+            prevTranslate = -currentIndex * productWidth;
+        }
+
+        slider.style.transition = 'transform 0.3s ease-out';
+        slider.style.transform = `translateX(${prevTranslate}px)`;
+        currentTranslate = prevTranslate;
+    }
+
+    function autoSlide() {
+        slide(1);
+    }
+
+    if (autoSlideInterval) {
+        setInterval(autoSlide, autoSlideInterval); // Auto-slide interval in milliseconds
+    }
+}
+
+// Create two sliders by calling the function separately for each ID
+createSlider('product-slider', 2000);
+createSlider('workwear-slider-1-track', 2000);
