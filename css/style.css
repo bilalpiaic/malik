@@ -2506,7 +2506,7 @@ button.btn {
 
 .product-slider-container {
     width: 100%;
-    height: 520px;
+    height: 530px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -2661,9 +2661,10 @@ button.btn {
 
     .responsive-buttonsl {
         
-        padding: 10px 20px;
-        font-size: 14px;
         top: 10px;
+        padding: 5px 20px;
+        font-size: 12px;
+        max-height: 50px;
     }
 }
 
@@ -2676,7 +2677,7 @@ button.btn {
 /* Feature Products */
 .workwear-button {
     position: absolute;
-    top: 49vh;
+    top: 50vh;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
@@ -2706,7 +2707,7 @@ button.btn {
 
 .workwear-slider-container {
     width: 100%;
-    height: 520px;
+    height: 530px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -2836,9 +2837,10 @@ button.btn {
     }
 
     .workwear-button {
-        bottom: 10px;
-        padding: 8px 15px;
-        font-size: 14px;
+       top: 10px;
+        padding: 5px 20px;
+        font-size: 12px;
+        max-height: 50px;
     }
    
 }
