@@ -421,3 +421,27 @@ function createSlider(sliderId, autoSlideInterval = 2000) {
 // Create two sliders by calling the function separately for each ID
 createSlider('product-slider', 2000);
 createSlider('workwear-slider-1-track', 2000);
+
+
+
+
+
+function slide(sliderId, direction) {
+    const slider = document.getElementById(sliderId);
+    const slideWidth = slider.querySelector('.product-slide').clientWidth;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    
+    let scrollAmount = slider.scrollLeft + (direction * slideWidth);
+
+    // Ensure scroll is within bounds
+    if (scrollAmount < 0) {
+        scrollAmount = 0;
+    } else if (scrollAmount > maxScroll) {
+        scrollAmount = maxScroll;
+    }
+
+    slider.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
