@@ -11,6 +11,11 @@ body {
 }
 
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 /* .links5{
     color: #3F69AA;
     font-size: 15px;
