@@ -2945,16 +2945,28 @@ button.btn {
   
   /* Product card styling */
   .product-card {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
   }
   
   .product-card:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     
+  }
+
+
+  .product-card p{
+    color: #d86c08;
+    font-weight: 600;
+    font-size: 20px;
+     
   }
   
   /* Image styling */
@@ -2976,6 +2988,7 @@ button.btn {
     font-weight: bold;
     margin: 10px 0;
     color: #333;
+
   }
   
   .product-price {
@@ -2992,7 +3005,7 @@ button.btn {
     border-radius: 5px;
     width: 100%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
   }
   
   .add-to-cart:hover {
