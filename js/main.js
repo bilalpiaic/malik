@@ -28,7 +28,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 800, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 50, 'easeInOutExpo');
         return false;
     });
     

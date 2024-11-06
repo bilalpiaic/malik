@@ -1499,6 +1499,64 @@ button.btn {
 
 
 
+.responsive-buttonsl2 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    margin-bottom: 10px;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Button Hover Effect */
+.responsive-buttonsl2:hover {
+    background-color: #d86c08;
+    transform: translateX(-50%) scale(1.2);
+    
+}
+
+
+
+/* Responsive Slider Adjustments */
+@media (max-width: 768px) {
+    .responsive-buttonsl2 {
+        padding: 12px 24px;
+        font-size: 16px;
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .responsive-buttonsl2 {
+        padding: 10px 20px;
+        font-size: 14px;
+        bottom: 10%;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2908,7 +2966,7 @@ button.btn {
   }
 
   .product-image:hover {
-    transform: scale(1.11);
+    transform: scale(1.13);
     transition: all 0.2s ease;
   }
   
