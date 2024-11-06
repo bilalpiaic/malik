@@ -200,7 +200,7 @@ button.btn {
     max-height: 90px;
     width: 300px;
     position: relative;
-    right: 15vh;
+    
 }
 
 /* Toggler Button Styling */
@@ -2540,7 +2540,7 @@ button.btn {
 /* Feature Products */
 .responsive-buttonsl {
     position: absolute;
-    top: 51vh;
+    top: 65vh;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
@@ -2741,7 +2741,7 @@ button.btn {
 /* Feature Products */
 .workwear-button {
     position: absolute;
-    top: 50vh;
+    top: 65vh;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
