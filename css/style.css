@@ -6,13 +6,15 @@ body {
     font-family: 'Open Sans', sans-serif;   
     font-weight: 400;
     background: #ffffff;
+    overflow-x: hidden;
+    overflow: hidden;
     
     
 }
 
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth ;
 }
 
 
@@ -283,6 +285,7 @@ button.btn {
 
     .navbar-toggler {
         order: 0;
+     
         margin-left: 10px;
     }
 
