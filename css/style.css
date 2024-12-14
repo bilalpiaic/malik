@@ -10,11 +10,10 @@ body {
     
     
 }
-
-
 html{
-    scroll-behavior:smooth ;
+    word-wrap: normal;
 }
+
 
 
 /* .links5{
@@ -205,17 +204,20 @@ button.btn {
 }
 
 /* Toggler Button Styling */
-.navbar-toggler {
+/* .navbar-toggler {
     border: 1px solid #333;
     padding: 0;
     
-}
+} */
 
 
 
 .navbar-light .navbar-toggler-icon {
     background-color: #333;
 }
+
+
+
 
 /* Navbar Links */
 .navbar-nav .nav-link {
@@ -2603,6 +2605,7 @@ button.btn {
 
 .product-slide:hover {
     box-shadow: 0 8px 20px rgba(224, 168, 83, 0.925); /* Stronger shadow on hover */
+   
 }
 
 .product-image {
@@ -2611,10 +2614,11 @@ button.btn {
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 20px;
 }
 
 .product-slide:hover .product-image {
-    transform: scale(1.6);
+    transform: scale(1.2);
   
 }
 
