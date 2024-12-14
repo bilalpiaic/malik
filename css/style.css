@@ -660,7 +660,11 @@ button.btn {
 /**********************************/
 .category-section {
     padding: 30px 15px;
-    background: #ececd3;
+    background: #c6cfd3;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.95);
+    border-radius: 50px;
+   
+
 }
 
 .category-item {
